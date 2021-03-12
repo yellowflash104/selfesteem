@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Main page -->
+<div class="main">
+  <!-- Number of Question  -->
+  <div class="wrapper" id="pages">
+    <span id="quizNumber">1</span><span>/7</span>
+  </div>
+
+  <!-- Quiz Question -->
+  <div class="quiz-questions" id="display-area">
+    <p id="question"></p>
+    <ul id="answer">
+    </ul>
+
+    <div id="quiz-results">
+      <button type="button" name="button" class="submit" id="submit">Submit</button>
+    </div>
+  </div>
+
+</div>
+
+<canvas id="canvas"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
