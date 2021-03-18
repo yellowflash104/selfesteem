@@ -64,7 +64,7 @@ var question10 = {
 
 // create an array of objects
 
-var questions = [question1, question2, question3, question4, question5, question6, question7];
+var questions = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10];
 
 // Initialize variables
 //------------------------------------------------------------------
@@ -180,7 +180,6 @@ function checkAnswer (){
     var userAns = selectedItem.innerHTML;
   }
 
-  /*// change the background of the answer according to the Results
   if (userAns == currentQuestion.answers[currentQuestion.correct]) {
     console.log("Correct! The answer is: "+ userAns);
     // change color of selected item by changing className
@@ -197,7 +196,7 @@ function checkAnswer (){
     ulTag.getElementsByTagName('li')[currentQuestion.correct].className = 'correct';
 
     console.log(currentQuestion.answers[currentQuestion.correct]);
-  }*/
+  }
 
   // Create a next Question button once the answer has been submitted
   button.innerHTML = 'Next Question';
