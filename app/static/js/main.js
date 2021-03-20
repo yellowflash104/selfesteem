@@ -183,17 +183,17 @@ function checkAnswer (){
   if (userAns == currentQuestion.answers[currentQuestion.correct]) {
     console.log("Correct! The answer is: "+ userAns);
     // change color of selected item by changing className
-    selectedItem.className = 'correct';
+    selectedItem.className = 'selected';
     // count the number of correct answers
     correctAns++;
     console.log(correctAns);
   } else {
     console.log("Wrong! The corrent answer is: "+  currentQuestion.answers[currentQuestion.correct]);
     //change the background of the wrong answer
-    selectedItem.className = 'wrong';
+    selectedItem.className = 'selected';
     //hightlight the right answer if the user got it wrong
     //change the class name of the correct answer
-    ulTag.getElementsByTagName('li')[currentQuestion.correct].className = 'correct';
+//    ulTag.getElementsByTagName('li')[currentQuestion.correct].className = 'selected';
 
     console.log(currentQuestion.answers[currentQuestion.correct]);
   }
@@ -256,6 +256,15 @@ function showResults () {
     document.getElementById('display-area').appendChild(newCongrats);
 
     confettiEffect();
+  }
+  else
+  {
+    {
+    var newCongrats = document.createElement('p');
+    var textCongrats = document.createTextNode('Better luck next time!!')
+    newCongrats.appendChild(textCongrats);
+    document.getElementById('display-area').appendChild(newCongrats);
+  }
   }
 
 }

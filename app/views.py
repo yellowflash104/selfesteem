@@ -5,3 +5,6 @@ from django.utils import timezone
 
 def welcome(request):
 	return render(request,'app/welcome.html')
+
+def home(request):
+	return render(request,'app/home.html')
